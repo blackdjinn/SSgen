@@ -1,0 +1,87 @@
+#build internal data tables.
+#
+# sysnature: nature of system, 1 2 or 3 stars
+addrange sysnature % 0 7 1
+addrange sysnature % 8 11 2
+add sysnature 12 3
+# pritype: spectral type of primary
+addrange pritype % 0 1 B
+add pritype 2 A
+addrange pritype % 3 7 M
+add pritype 8 K
+add pritype 9 G
+addrange pritype % 10 12 F
+# prisize: Size of primary
+add prisize 0 Ia
+add prisize 1 Ib
+add prisize 2 II
+add prisize 3 III
+add prisize 4 IV
+addrange prisize % 5 10 V
+add prisize 11 VI
+add prisize 12 D
+# comtype: Companion spectral type
+add comtype 1 B
+add comtype 2 A
+addrange comtype % 3 4 F
+addrange comtype % 5 6 G
+addrange comtype % 7 8 K
+addrange comtype % 9 36 M
+# comsize: Companion size
+add comsize 0 Ia
+add comsize 1 Ib
+add comsize 2 II
+add comsize 3 III
+add comsize 4 IV
+addrange comsize % 5 6 D
+addrange comsize % 7 8 V
+add comsize 9 VI
+addrange comsize % 10 36 D
+# comorbit: Companion Orbit
+addrange comorbit % -2 3 { C }
+add comorbit 4 { 1 }
+add comorbit 5 { 2 }
+add comorbit 6 { 3 }
+add comorbit 7 { 4 + [die] }
+add comorbit 8 { 5 + [die] }
+add comorbit 9 { 6 + [die] }
+add comorbit 10 { 7 + [die] }
+add comorbit 11 { 8 + [die] }
+addrange comorbit % 12 16 { F }
+# gasnum: Number of gas giants
+addrange gasnum % 1 3 1
+addrange gasnum % 4 5 2
+addrange gasnum % 6 7 3
+addrange gasnum % 8 10 4
+addrange gasnum % 11 12 5
+# plannum: Planetoid belt count
+addrange plannum % -3 0 3
+addrange plannum % 1 6 2
+addrange plannum % 7 12 1
+# capnum: Captured planet count
+addrange capnum % 1 2 1
+addrange capnum % 3 4 2
+addrange capnum % 5 7 3
+# emptynum: Empty orbit number
+addrange emptynum % 1 2 1
+add emptynum 3 2
+addrange emptynum % 4 7 3
+#starport: Starport code
+addrange starport % 2 4 A
+addrange starport % 5 6 B
+addrange starport % 7 8 C
+add starport 9 D
+addrange starport % 10 11 E
+add starport 12 X
+# PEgasnum: Gas giant count from Pocket Empires table
+addrange PEgasnum % 2 4 0
+add PEgasnum 5 1
+add PEgasnum 6 2
+addrange PEgasnum % 7 8 3
+addrange PEgasnum % 8 10 4
+addrange PEgasnum % 11 12 5
+# PEbeltnum: Belt Count from Pocket Empires Table
+addrange PEbeltnum % 2 7 0
+addrange PEbeltnum % 8 9 1
+addrange PEbeltnum % 10 12 2
+addrange PEbeltnum % 13 17 3
